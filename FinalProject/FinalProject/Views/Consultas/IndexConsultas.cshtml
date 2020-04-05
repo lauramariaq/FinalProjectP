@@ -29,7 +29,7 @@
         @Html.ValidationMessageFor(m => m.nDoctor, "", new { @class = "text-danger" })
 
         @Html.Label("Fecha consulta:")
-        @Html.TextBoxFor(q => q.Fecha, new {@class="form-control", @type="date", placeholder = "fecha" })
+        @Html.TextBoxFor(q => q.Fecha, new { @class = "form-control", @type = "date", placeholder = "fecha" })
         @Html.ValidationMessageFor(m => m.Fecha, "", new { @class = "text-danger" })
 
     </div>
@@ -38,3 +38,24 @@
     <input type="submit" value="SEND" />
 
 }
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>NombrePaciente</th>
+            <th>CedulaPaciente</th>
+            <th>NombreDoctor</th>
+            <th>FechaConsulta</th>
+        </tr>
+    </thead>
+    <tbody>
+
+    <td>55</td>
+    <td>Laura Quiñones</td>
+    <td>40231566742</td>
+    <td>Pedro Gomez</td>
+    <td>20/03/2020 02:30pm</td>
+
+    </tbody>
+</table>

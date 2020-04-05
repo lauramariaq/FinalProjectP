@@ -6,6 +6,7 @@
 
 <h2>AddDoctor</h2>
 
+
 @using (Html.BeginForm("AddDoctor", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     <div>
@@ -33,3 +34,26 @@
     </div>
 
 
+    <input type="submit" value="SEND" />
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Cedula</th>
+            <th>Exequatur</th>
+            <th>Especialidad</th>
+        </tr>
+    </thead>
+    <tbody>
+
+    <td>55</td>
+    <td>Laura Quiñones</td>
+    <td>40231566742</td>
+    <td>515155451</td>
+    <td>Cardiologo</td>
+
+    </tbody>
+</table>

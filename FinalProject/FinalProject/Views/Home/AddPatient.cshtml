@@ -25,18 +25,32 @@
         @Html.TextBoxFor(s => s.Cedula, new { @class = "form-control", placeholder = "Insert your name" })
         @Html.ValidationMessageFor(m => m.Cedula, "", new { @class = "text-danger" })
 
-        <div>
-            @Html.Label("insurance")
-            @Html.RadioButtonFor(a => a.insurance, "insurance")
-        </div>
 
         @Html.Label("Insurance company:")
-        @Html.TextBoxFor(q => q.insurance, new { @class = "form-control", placeholder = "Insert your Insurance company" })
+        @Html.TextBoxFor(q => q.insurance, new { @class = "form-control", placeholder = "Nombre de seguro/ No tiene" })
         @Html.ValidationMessageFor(m => m.insurance, "", new { @class = "text-danger" })
 
     </div>
 
 
     <input type="submit" value="SEND" />
+}
 
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Cedula</th>
+                <th>seguro</th>
+            </tr>
+        </thead>
+        <tbody>
 
+        <td>55</td>
+        <td>Laura Quiñones</td>
+        <td>40231566742</td>
+        <td>Humano Max</td>
+
+        </tbody>
+    </table>

@@ -1,7 +1,46 @@
-﻿
+﻿@model FinalProject.Models.altas
+@using FinalProject.Models
 @{
     ViewBag.Title = "IndexAltas";
 }
 
 <h2>IndexAltas</h2>
 
+
+@using (Html.BeginForm("indexAltas", "Altas", FormMethod.Post, new { enctype = "/form-data" }))
+{
+    <div>
+
+        @Html.Label("ID:")
+        @Html.TextBoxFor(i => i.id, new { @class = "form-control", placeholder = "Insert ID" })
+        @Html.ValidationMessageFor(m => m.id, "", new { @class = "text-danger" })
+
+        @Html.Label("ID Ingreso:")
+        @Html.TextBoxFor(s => s.idIngreso, new { @class = "form-control", placeholder = "Insert nombre paciente" })
+        @Html.ValidationMessageFor(m => m.idIngreso, "", new { @class = "text-danger" })
+
+
+
+    </div>
+
+
+    <input type="submit" value="SEND" />
+
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>IDIngreso</th>
+            <th>Monto a pagar</th>
+        </tr>
+    </thead>
+    <tbody>
+
+    <td>55</td>
+    <td> 18</td>
+    <td>RD$: 5500</td>
+
+    </tbody>
+</table>

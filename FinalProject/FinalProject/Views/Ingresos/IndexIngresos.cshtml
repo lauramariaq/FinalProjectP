@@ -23,7 +23,7 @@
         @Html.ValidationMessageFor(m => m.NHabitacion, "", new { @class = "text-danger" })
 
         @Html.Label("Fecha ingreso:")
-        @Html.TextBoxFor(q => q.FechaInicio, new { @class = "form-control", @type="datetime-local", placeholder = "fecha" })
+        @Html.TextBoxFor(q => q.FechaInicio, new { @class = "form-control", @type = "date", placeholder = "fecha" })
         @Html.ValidationMessageFor(m => m.FechaInicio, "", new { @class = "text-danger" })
 
     </div>
@@ -32,3 +32,22 @@
     <input type="submit" value="SEND" />
 
 }
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>NombrePaciente</th>
+            <th># habitacion</th>
+            <th>FechaIngreso</th>
+        </tr>
+    </thead>
+    <tbody>
+
+    <td>55</td>
+    <td>Laura Quiñones</td>
+    <td>512</td>
+    <td>12/03/2020</td>
+
+    </tbody>
+</table>
