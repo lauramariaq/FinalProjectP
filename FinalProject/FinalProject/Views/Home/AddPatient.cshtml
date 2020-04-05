@@ -1,0 +1,42 @@
+﻿@model FinalProject.Models.patient
+@using FinalProject.Models
+
+@{
+    ViewBag.Title = "AddPatient";
+}
+
+<h2>AddPatient</h2>
+
+<h3>Datos del paciente</h3>
+
+@using (Html.BeginForm("AddPatient", "Home", FormMethod.Post, new { enctype = "/form-data" }))
+{
+    <div>
+
+        @Html.Label("ID:")
+        @Html.TextBoxFor(i => i.ID, new { @class = "form-control", placeholder = "Insert your ID" })
+        @Html.ValidationMessageFor(m => m.ID, "", new { @class = "text-danger" })
+
+        @Html.Label("Name:")
+        @Html.TextBoxFor(s => s.Name, new { @class = "form-control", placeholder = "Insert your name" })
+        @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+
+        @Html.Label("Cedula:")
+        @Html.TextBoxFor(s => s.Cedula, new { @class = "form-control", placeholder = "Insert your name" })
+        @Html.ValidationMessageFor(m => m.Cedula, "", new { @class = "text-danger" })
+
+        <div>
+            @Html.Label("insurance")
+            @Html.RadioButtonFor(a => a.insurance, "insurance")
+        </div>
+
+        @Html.Label("Insurance company:")
+        @Html.TextBoxFor(q => q.insurance, new { @class = "form-control", placeholder = "Insert your Insurance company" })
+        @Html.ValidationMessageFor(m => m.insurance, "", new { @class = "text-danger" })
+
+    </div>
+
+
+    <input type="submit" value="SEND" />
+
+

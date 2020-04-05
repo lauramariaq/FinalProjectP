@@ -1,0 +1,35 @@
+﻿@model FinalProject.Models.doctor
+@using FinalProject.Models
+@{
+    ViewBag.Title = "AddDoctor";
+}
+
+<h2>AddDoctor</h2>
+
+@using (Html.BeginForm("AddDoctor", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div>
+        @Html.Label("ID:")
+        @Html.TextBoxFor(i => i.ID, new { @class = "form-control", placeholder = "Insert your ID" })
+        @Html.ValidationMessageFor(m => m.ID, "", new { @class = "text-danger" })
+
+        @Html.Label("Name:")
+        @Html.TextBoxFor(s => s.Name, new { @class = "form-control", placeholder = "Insert name" })
+        @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+
+        @Html.Label("Cedula:")
+        @Html.TextBoxFor(s => s.cedula, new { @class = "form-control", placeholder = "Insert your name" })
+        @Html.ValidationMessageFor(m => m.cedula, "", new { @class = "text-danger" })
+
+        @Html.Label("Exequatur:")
+        @Html.TextBoxFor(s => s.exequatur, new { @class = "form-control", placeholder = "Insert exequatur" })
+        @Html.ValidationMessageFor(m => m.exequatur, "", new { @class = "text-danger" })
+
+        @Html.Label("Especialidad:")
+        @Html.TextBoxFor(s => s.Especialidad, new { @class = "form-control", placeholder = "Insert especialidad" })
+        @Html.ValidationMessageFor(m => m.Especialidad, "", new { @class = "text-danger" })
+
+
+    </div>
+
+
