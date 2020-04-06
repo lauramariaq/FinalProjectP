@@ -12,10 +12,10 @@ namespace FinalProject.Models
         public int id { get; set; }
 
         [Required(ErrorMessage = "Nombre paciente required")]
-        public int nPaciente { get; set; }
+        public patient paciente { get; set; }
 
         [Required(ErrorMessage = "#habitacion required")]
-        public int NHabitacion { get; set; }
+        public room room { get; set; }
 
         [Required(ErrorMessage = "FechaInicio required")]
         public DateTime FechaInicio { get; set; }
