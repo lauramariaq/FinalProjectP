@@ -34,26 +34,44 @@
     </div>
 
 
-    <input type="submit" value="SEND" />
-}
+    <input type="submit" value="Agregar" />
+} 
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>Cedula</th>
-            <th>Exequatur</th>
-            <th>Especialidad</th>
-        </tr>
-    </thead>
-    <tbody>
 
-    <td>55</td>
-    <td>Laura Quiñones</td>
-    <td>40231566742</td>
-    <td>515155451</td>
-    <td>Cardiologo</td>
+       @if(ViewBag.result == true)
+       {
+           <h3>Se agrego el doctor!</h3>
+       }
 
-    </tbody>
-</table>
+           <table class="table">
+               <thead>
+                   <tr>
+                       <th>ID</th>
+                       <th>Nombre</th>
+                       <th>Cedula</th>
+                       <th>Exequatur</th>
+                       <th>Especialidad</th>
+                       <th>Opciones</th>
+                   </tr>
+               </thead>
+               <tbody>
+                   @if (ViewBag.listadoc.Count > 0)
+                   {
+                       foreach (doctor doc in ViewBag.listadoc)
+                       {
+                       <td>@doc.ID</td>
+                       <td>@doc.Name</td>
+                       <td>@doc.cedula</td>
+                       <td>@doc.exequatur</td>
+                       <td>@doc.Especialidad</td>
+                       <td><input type="button" value="editar" /></td>
+                       <td><input type="button" value="eliminar" /></td>
+                   }
+               }
+
+
+                   
+
+                   </tbody>
+
+               </table>

@@ -11,20 +11,18 @@ namespace FinalProject.Models
         [Required(ErrorMessage = "id required")]
         public int id { get; set; }
 
-        [Required(ErrorMessage = "Nombre del paciente required")]
-        public string nPaciente { get; set; }
-
-        [Required(ErrorMessage = "cedula required")]
-        public string CedulaPaciente { get; set; }
+        public patient patient { get; set; }
 
         [Required(ErrorMessage = "Nombre del doctor required")]
-        public string nDoctor { get; set; }
+        public doctor doctor { get; set; }
 
         [Required(ErrorMessage = "FechaHora required")]
         public DateTime Fecha { get; set; }
 
         [Required(ErrorMessage = "FechaHora required")]
         public DateTime Hora { get; set; }
+
+
 
     }
 }

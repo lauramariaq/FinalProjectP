@@ -12,7 +12,7 @@ namespace FinalProject.Models
         public int id { get; set; }
 
         [Required(ErrorMessage = "IDIngreso required")]
-        public int idIngreso { get; set; }
+        public ingresos ingreso { get; set; }
 
         [Required(ErrorMessage = "monto required")]
         public int  monto { get; set; }
