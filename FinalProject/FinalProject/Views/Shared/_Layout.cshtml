@@ -20,15 +20,33 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Consultas", "indexConsultas", "Consultas")</li>
-                    <li>@Html.ActionLink("Ingresos", "indexIngresos", "Ingresos")</li>
-                    <li>@Html.ActionLink("Altas Medicas", "indexAltas", "Altas")</li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle"
-                           data-toggle="dropdown">Agregar:<b class="caret"></b></a>
+                           data-toggle="dropdown">Procesos:<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Citas medicas", "Consulta", "Home")</li>
+                            <li>@Html.ActionLink("Ingresos", "IndexIngresos", "Ingresos")</li>
+                            <li>@Html.ActionLink("Alta medica", "IndexAltas", "Altas")</li>
+                        </ul>
+
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle"
+                           data-toggle="dropdown">Consultas:<b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>@Html.ActionLink("Doctor", "AddDoctor", "Home")</li>
                             <li>@Html.ActionLink("Paciente", "AddPatient", "Home")</li>
+                            <li>@Html.ActionLink("Habitacion", "AddRoom", "Home")</li>
+                        </ul>
+
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle"
+                           data-toggle="dropdown">Mantenimiento:<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Doctor", "AddDoctor", "Home")</li>
+                            <li>@Html.ActionLink("Paciente", "AddPatient", "Home")</li>
+                            <li>@Html.ActionLink("Habitacion", "AddRoom", "Home")</li>
                         </ul>
 
                     </li>

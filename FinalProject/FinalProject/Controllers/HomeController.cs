@@ -28,14 +28,22 @@ namespace FinalProject.Controllers
         public ActionResult AddPatient()
         {
 
-            return View();
+            return Redirect("/patients/index");
         }
 
         public ActionResult AddDoctor()
         {
-            
-
             return Redirect("/doctors/index");
+        }
+
+        public ActionResult AddRoom()
+        {
+            return Redirect("/rooms/index");
+        }
+
+        public ActionResult Consulta()
+        {
+            return Redirect("/consultas1/index");
         }
 
         //[HttpPost]

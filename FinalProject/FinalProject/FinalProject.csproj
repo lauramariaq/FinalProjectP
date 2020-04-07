@@ -128,13 +128,13 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AltasController.cs" />
+    <Compile Include="Controllers\consultas1Controller.cs" />
     <Compile Include="Controllers\ConsultasController.cs" />
-    <Compile Include="Controllers\DoctorCrudController.cs" />
     <Compile Include="Controllers\doctorsController.cs" />
-    <Compile Include="Controllers\PatientCrudController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IngresosController.cs" />
-    <Compile Include="Controllers\RoomCrudController.cs" />
+    <Compile Include="Controllers\patientsController.cs" />
+    <Compile Include="Controllers\roomsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -190,18 +190,30 @@
     <Content Include="Views\Altas\IndexAltas.cshtml" />
     <Content Include="Views\Consultas\IndexConsultas.cshtml" />
     <Content Include="Views\Ingresos\IndexIngresos.cshtml" />
-    <Content Include="Views\PatientCrud\EditarPaciente.cshtml" />
     <Content Include="Views\doctors\Create.cshtml" />
     <Content Include="Views\doctors\Delete.cshtml" />
     <Content Include="Views\doctors\Details.cshtml" />
     <Content Include="Views\doctors\Edit.cshtml" />
     <Content Include="Views\doctors\Index.cshtml" />
+    <Content Include="Views\patients\Create.cshtml" />
+    <Content Include="Views\patients\Delete.cshtml" />
+    <Content Include="Views\patients\Details.cshtml" />
+    <Content Include="Views\patients\Edit.cshtml" />
+    <Content Include="Views\patients\Index.cshtml" />
+    <Content Include="Views\rooms\Create.cshtml" />
+    <Content Include="Views\rooms\Delete.cshtml" />
+    <Content Include="Views\rooms\Details.cshtml" />
+    <Content Include="Views\rooms\Edit.cshtml" />
+    <Content Include="Views\rooms\Index.cshtml" />
+    <Content Include="Views\consultas1\Create.cshtml" />
+    <Content Include="Views\consultas1\Delete.cshtml" />
+    <Content Include="Views\consultas1\Details.cshtml" />
+    <Content Include="Views\consultas1\Edit.cshtml" />
+    <Content Include="Views\consultas1\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Consulta\" />
-    <Folder Include="Views\DoctorCrud\" />
-    <Folder Include="Views\RoomCrud\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
