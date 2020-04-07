@@ -127,6 +127,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\altas1Controller.cs" />
     <Compile Include="Controllers\AltasController.cs" />
     <Compile Include="Controllers\consultas1Controller.cs" />
     <Compile Include="Controllers\ConsultasController.cs" />
@@ -210,6 +211,11 @@
     <Content Include="Views\consultas1\Details.cshtml" />
     <Content Include="Views\consultas1\Edit.cshtml" />
     <Content Include="Views\consultas1\Index.cshtml" />
+    <Content Include="Views\altas1\Create.cshtml" />
+    <Content Include="Views\altas1\Delete.cshtml" />
+    <Content Include="Views\altas1\Details.cshtml" />
+    <Content Include="Views\altas1\Edit.cshtml" />
+    <Content Include="Views\altas1\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

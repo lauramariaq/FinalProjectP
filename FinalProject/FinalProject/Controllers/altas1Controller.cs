@@ -10,141 +10,111 @@ using FinalProject.Models;
 
 namespace FinalProject.Controllers
 {
-    public class doctorsController : Controller
+    public class altas1Controller : Controller
     {
         private HospitalContext db = new HospitalContext();
 
-        // GET: doctors
-        public ActionResult Index()
+        // GET: altas1
+        public ActionResult Index([Bind(Include = "ingreso_id")] altas altas)
         {
-            return View(db.doctors.ToList());
+            return View(db.altas.ToList());
         }
-        [HttpPost]
-        public ActionResult Index(string busqueda)
-        {
-            if (busqueda == string.Empty)
-            {
-                return View(db.doctors.ToList());
-            }
-            else
-            {
-                var result = from a in db.doctors
-                          where a.Name == busqueda
-                          orderby a.Name
-                          select a;
-                
-                ViewBag.conteo = result.Count();
-                
 
-                return View(result);
-            }
-        }
-        // GET: doctors/Details/5
+        // GET: altas1/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            doctor doctor = db.doctors.Find(id);
-            if (doctor == null)
+            altas altas = db.altas.Find(id);
+            if (altas == null)
             {
                 return HttpNotFound();
             }
-            return View(doctor);
+            return View(altas);
         }
 
-        // GET: doctors/Create
+        // GET: altas1/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: doctors/Create
+        // POST: altas1/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,cedula,Name,exequatur,Especialidad")] doctor doctor)
+        public ActionResult Create([Bind(Include = "id,monto")] altas altas)
         {
             if (ModelState.IsValid)
             {
-                db.doctors.Add(doctor);
+                db.altas.Add(altas);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(doctor);
+            return View(altas);
         }
 
-        // GET: doctors/Edit/5
+        // GET: altas1/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            doctor doctor = db.doctors.Find(id);
-            if (doctor == null)
+            altas altas = db.altas.Find(id);
+            if (altas == null)
             {
                 return HttpNotFound();
             }
-            return View(doctor);
+            return View(altas);
         }
 
-        // POST: doctors/Edit/5
+        // POST: altas1/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,cedula,Name,exequatur,Especialidad")] doctor doctor)
+        public ActionResult Edit([Bind(Include = "id,monto")] altas altas)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(doctor).State = EntityState.Modified;
+                db.Entry(altas).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(doctor);
+            return View(altas);
         }
 
-        // GET: doctors/Delete/5
+        // GET: altas1/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            doctor doctor = db.doctors.Find(id);
-            if (doctor == null)
+            altas altas = db.altas.Find(id);
+            if (altas == null)
             {
                 return HttpNotFound();
             }
-            return View(doctor);
+            return View(altas);
         }
 
-        // POST: doctors/Delete/5
+        // POST: altas1/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            doctor doctor = db.doctors.Find(id);
-            db.doctors.Remove(doctor);
+            altas altas = db.altas.Find(id);
+            db.altas.Remove(altas);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
 
-        //public ActionResult Busqueda(string Name)
-        //{
-        //    var result = from n in db.doctors select n;
-        //    if (String.IsNullOrEmpty(Name))
-        //    {
-        //        var Estudiante2018 = from n in db.doctors where (n.Name == "Name") && (n.cedula) select a;
-
-        //    }
-
-        //    return View(result);
-        //}
         protected override void Dispose(bool disposing)
         {
             if (disposing)
