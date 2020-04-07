@@ -127,13 +127,11 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\altas1Controller.cs" />
-    <Compile Include="Controllers\AltasController.cs" />
-    <Compile Include="Controllers\consultas1Controller.cs" />
-    <Compile Include="Controllers\ConsultasController.cs" />
+    <Compile Include="Controllers\altasController.cs" />
+    <Compile Include="Controllers\consultasController.cs" />
     <Compile Include="Controllers\doctorsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\IngresosController.cs" />
+    <Compile Include="Controllers\ingresosController.cs" />
     <Compile Include="Controllers\patientsController.cs" />
     <Compile Include="Controllers\roomsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -188,9 +186,6 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\AddPatient.cshtml" />
     <Content Include="Views\Home\AddDoctor.cshtml" />
-    <Content Include="Views\Altas\IndexAltas.cshtml" />
-    <Content Include="Views\Consultas\IndexConsultas.cshtml" />
-    <Content Include="Views\Ingresos\IndexIngresos.cshtml" />
     <Content Include="Views\doctors\Create.cshtml" />
     <Content Include="Views\doctors\Delete.cshtml" />
     <Content Include="Views\doctors\Details.cshtml" />
@@ -206,20 +201,24 @@
     <Content Include="Views\rooms\Details.cshtml" />
     <Content Include="Views\rooms\Edit.cshtml" />
     <Content Include="Views\rooms\Index.cshtml" />
-    <Content Include="Views\consultas1\Create.cshtml" />
-    <Content Include="Views\consultas1\Delete.cshtml" />
-    <Content Include="Views\consultas1\Details.cshtml" />
-    <Content Include="Views\consultas1\Edit.cshtml" />
-    <Content Include="Views\consultas1\Index.cshtml" />
-    <Content Include="Views\altas1\Create.cshtml" />
-    <Content Include="Views\altas1\Delete.cshtml" />
-    <Content Include="Views\altas1\Details.cshtml" />
-    <Content Include="Views\altas1\Edit.cshtml" />
-    <Content Include="Views\altas1\Index.cshtml" />
+    <Content Include="Views\consultas\Create.cshtml" />
+    <Content Include="Views\consultas\Delete.cshtml" />
+    <Content Include="Views\consultas\Details.cshtml" />
+    <Content Include="Views\consultas\Edit.cshtml" />
+    <Content Include="Views\consultas\Index.cshtml" />
+    <Content Include="Views\ingresos\Create.cshtml" />
+    <Content Include="Views\ingresos\Delete.cshtml" />
+    <Content Include="Views\ingresos\Details.cshtml" />
+    <Content Include="Views\ingresos\Edit.cshtml" />
+    <Content Include="Views\ingresos\Index.cshtml" />
+    <Content Include="Views\altas\Create.cshtml" />
+    <Content Include="Views\altas\Delete.cshtml" />
+    <Content Include="Views\altas\Details.cshtml" />
+    <Content Include="Views\altas\Edit.cshtml" />
+    <Content Include="Views\altas\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Consulta\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

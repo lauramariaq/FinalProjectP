@@ -12,6 +12,12 @@
 <table class="table">
     <tr>
         <th>
+            @Html.DisplayNameFor(model => model.doctor.cedula)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.patient.Cedula)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Fecha)
         </th>
         <th>
@@ -22,6 +28,12 @@
 
 @foreach (var item in Model) {
     <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.doctor.cedula)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.patient.Cedula)
+        </td>
         <td>
             @Html.DisplayFor(modelItem => item.Fecha)
         </td>

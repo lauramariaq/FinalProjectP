@@ -24,9 +24,9 @@
                         <a href="#" class="dropdown-toggle"
                            data-toggle="dropdown">Procesos:<b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li>@Html.ActionLink("Citas medicas", "Consulta", "Home")</li>
-                            <li>@Html.ActionLink("Ingresos", "IndexIngresos", "Ingresos")</li>
-                            <li>@Html.ActionLink("Alta medica", "IndexAltas", "Altas")</li>
+                            <li>@Html.ActionLink("Citas medicas", "Index", "consultas")</li>
+                            <li>@Html.ActionLink("Ingresos", "Index", "ingresos")</li>
+                            <li>@Html.ActionLink("Alta medica", "Index", "altas")</li>
                         </ul>
 
                     </li>
@@ -44,9 +44,9 @@
                         <a href="#" class="dropdown-toggle"
                            data-toggle="dropdown">Mantenimiento:<b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li>@Html.ActionLink("Doctor", "AddDoctor", "Home")</li>
-                            <li>@Html.ActionLink("Paciente", "AddPatient", "Home")</li>
-                            <li>@Html.ActionLink("Habitacion", "AddRoom", "Home")</li>
+                            <li>@Html.ActionLink("Doctor", "Index", "doctors")</li>
+                            <li>@Html.ActionLink("Paciente", "Index", "patients")</li>
+                            <li>@Html.ActionLink("Habitacion", "Index", "rooms")</li>
                         </ul>
 
                     </li>

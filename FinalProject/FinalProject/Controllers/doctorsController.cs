@@ -29,7 +29,7 @@ namespace FinalProject.Controllers
             else
             {
                 var result = from a in db.doctors
-                          where a.Name == busqueda
+                          where a.Name == busqueda 
                           orderby a.Name
                           select a;
                 
@@ -38,6 +38,8 @@ namespace FinalProject.Controllers
 
                 return View(result);
             }
+
+
         }
         // GET: doctors/Details/5
         public ActionResult Details(int? id)

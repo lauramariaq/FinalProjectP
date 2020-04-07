@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FinalProject.Models
 {
@@ -11,9 +12,13 @@ namespace FinalProject.Models
         [Required(ErrorMessage = "id required")]
         public int id { get; set; }
 
+        public int patient_ID { set; get; }
+        [ForeignKey("patient_ID")]
         public patient patient { get; set; }
 
-        [Required(ErrorMessage = "Nombre del doctor required")]
+        [Required(ErrorMessage = "")]
+        public int doctors_ID { set; get; }
+        [ForeignKey("doctors_ID")]
         public doctor doctor { get; set; }
 
         [Required(ErrorMessage = "FechaHora required")]
